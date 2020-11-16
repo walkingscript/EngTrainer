@@ -2,6 +2,7 @@ import random
 from typing import NamedTuple
 
 from vocabruary import Vocabruary
+from settings import vocabruary_file_path
 
 
 class WordSet(NamedTuple):
@@ -20,12 +21,9 @@ class MatchMaker:
     def __init__(self, lang='en', guess_count=4):
         '''Param lang accepts only ru or en and determines from which
         language will be translating words. By default en.'''
-        if lang == 'en':
-            self.make_set = self.__make_set_from_en_to_ru
-        elif lang == 'ru':
-            self.make_set = self.__make_set_from_ru_to_en
+        self.lang = lang
         self.guess_count = guess_count
-        self.vc = Vocabruary(filename='data\\vocabruary.txt')
+        self.vc = Vocabruary(filename=vocabruary_file_path)
 
     def is_english_verb(self, word: str):
         '''Returns True if english word is a verb'''
@@ -37,6 +35,12 @@ class MatchMaker:
         word_ending = ('ть', 'ться')
         if word.endswith(word_ending):
             return True
+
+    def make_set(self):
+        if self.lang == 'en':
+            return self.__make_set_from_en_to_ru()
+        elif self.lang == 'ru':
+            return self.__make_set_from_ru_to_en()
 
     def __make_set_from_en_to_ru(self):
         '''Creates the set of words for round.

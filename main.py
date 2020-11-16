@@ -1,10 +1,10 @@
+#!venv/bin/python3.9
 from application import Application
 
 
 def main():
     app = Application()
     app.start()
-    app.test()
 
 
 if __name__ == "__main__":

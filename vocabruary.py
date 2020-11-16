@@ -62,5 +62,6 @@ class Vocabruary:
     def __parse_line(self, line: str):
         data = self.data_divider.findall(line)
         src_word = data[0][0]
-        translate_list = data[0][1].split(', ')
+        translate_list = data[0][1].split(',')
+        translate_list = list(map(str.strip, translate_list))
         return (src_word, translate_list)

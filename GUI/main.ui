@@ -2,6 +2,9 @@
 <ui version="4.0">
  <class>MainWindow</class>
  <widget class="QMainWindow" name="MainWindow">
+  <property name="windowModality">
+   <enum>Qt::NonModal</enum>
+  </property>
   <property name="enabled">
    <bool>true</bool>
   </property>
@@ -9,9 +12,27 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>706</width>
-    <height>655</height>
+    <width>672</width>
+    <height>624</height>
    </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>672</width>
+    <height>624</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>672</width>
+    <height>624</height>
+   </size>
   </property>
   <property name="windowTitle">
    <string>EngTrainer</string>
@@ -23,14 +44,14 @@
    <widget class="QPushButton" name="btn_answer_1">
     <property name="geometry">
      <rect>
-      <x>50</x>
-      <y>140</y>
+      <x>30</x>
+      <y>100</y>
       <width>300</width>
       <height>200</height>
      </rect>
     </property>
     <property name="cursor">
-     <cursorShape>UpArrowCursor</cursorShape>
+     <cursorShape>ArrowCursor</cursorShape>
     </property>
     <property name="acceptDrops">
      <bool>false</bool>
@@ -60,8 +81,8 @@
    <widget class="QPushButton" name="btn_answer_2">
     <property name="geometry">
      <rect>
-      <x>360</x>
-      <y>140</y>
+      <x>340</x>
+      <y>100</y>
       <width>300</width>
       <height>200</height>
      </rect>
@@ -91,8 +112,8 @@
    <widget class="QPushButton" name="btn_answer_3">
     <property name="geometry">
      <rect>
-      <x>50</x>
-      <y>350</y>
+      <x>30</x>
+      <y>310</y>
       <width>300</width>
       <height>200</height>
      </rect>
@@ -122,8 +143,8 @@
    <widget class="QPushButton" name="btn_answer_4">
     <property name="geometry">
      <rect>
-      <x>360</x>
-      <y>350</y>
+      <x>340</x>
+      <y>310</y>
       <width>300</width>
       <height>200</height>
      </rect>
@@ -156,8 +177,8 @@
    <widget class="QLabel" name="lbl_question">
     <property name="geometry">
      <rect>
-      <x>50</x>
-      <y>20</y>
+      <x>30</x>
+      <y>10</y>
       <width>611</width>
       <height>81</height>
      </rect>
@@ -184,23 +205,25 @@
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QCommandLinkButton" name="btn_next_round">
+   <widget class="QPushButton" name="btn_next_round">
     <property name="enabled">
      <bool>false</bool>
     </property>
     <property name="geometry">
      <rect>
-      <x>300</x>
-      <y>560</y>
-      <width>101</width>
+      <x>280</x>
+      <y>530</y>
+      <width>111</width>
       <height>41</height>
      </rect>
     </property>
-    <property name="styleSheet">
-     <string notr="true"/>
+    <property name="font">
+     <font>
+      <pointsize>18</pointsize>
+     </font>
     </property>
     <property name="text">
-     <string>Continue</string>
+     <string>Next</string>
     </property>
    </widget>
   </widget>
@@ -209,7 +232,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>706</width>
+     <width>672</width>
      <height>21</height>
     </rect>
    </property>
@@ -217,7 +240,7 @@
     <property name="title">
      <string>Mode</string>
     </property>
-    <addaction name="actionChange_Mode"/>
+    <addaction name="menu_item_change_mode"/>
    </widget>
    <addaction name="menuMode"/>
   </widget>
@@ -241,7 +264,10 @@
     <string>Ru -&gt; En</string>
    </property>
   </action>
-  <action name="actionChange_Mode">
+  <action name="menu_item_change_mode">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
    <property name="text">
     <string>Change Mode</string>
    </property>
