@@ -34,10 +34,8 @@ class Application(Ui_MainWindow):
     def __change_mode(self):
         if self.menu_item_change_mode.isChecked():
             self.__match_maker = MatchMaker(lang='ru')
-            print('Ru')
         else:
             self.__match_maker = MatchMaker(lang='en')
-            print('En')
 
     def __next_round(self):
         self.btn_next_round.setEnabled(False)
