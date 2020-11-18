@@ -2,11 +2,6 @@ import re
 import random
 from functools import reduce
 
-from loguru import logger
-
-
-logger.add('logs/vocabruary.txt')
-
 
 class Vocabruary:
     '''Stores words.

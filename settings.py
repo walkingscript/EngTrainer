@@ -1,6 +1,7 @@
 import os
 
 
+stats_file = 'stats.db'
 vocabruary_file_path = 'data' + os.sep + 'vocabruary.txt'
 
 stylesheets = {
