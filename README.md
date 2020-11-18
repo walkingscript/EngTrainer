@@ -16,7 +16,7 @@ For Linux:
 For Windows:
     venv\scripts\activate
     
-After you activated the environment you should install requirement libraries.
+After you activated the environment you should install require libraries.
 Type "pip install -r requirements.txt".
 
 After that. Type "python main.py". The project had runed. 
