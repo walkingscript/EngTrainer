@@ -16,7 +16,7 @@ class Statistics:
         self.__init_db()
 
     def __init_db(self):
-        self.conn = sqlite3.connect(stats_file, isolation_level=None)
+        self.conn = sqlite3.connect(stats_file)
         self.cursor = self.conn.cursor()
         self.__fill_db()
 
@@ -97,3 +97,8 @@ class Statistics:
         for i, key in enumerate(self.__stats.keys()):
             self.__stats[key] = data[i]
         return self.__stats
+
+    def __del__(self):
+        self.conn.commit()
+        self.cursor.close()
+        self.conn.close()
