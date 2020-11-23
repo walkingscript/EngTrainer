@@ -7,3 +7,5 @@ compilation.txt
 icons/main.ico
 main.spec
 stats.db
+.vscode
+bugs

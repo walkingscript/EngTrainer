@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'GUI/main.ui'
+# Form implementation generated from reading ui file 'GUI\main.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.1
 #
@@ -86,7 +86,7 @@ class Ui_MainWindow(object):
         self.lbl_question.setObjectName("lbl_question")
         self.btn_next_round = QtWidgets.QPushButton(self.centralwidget)
         self.btn_next_round.setEnabled(True)
-        self.btn_next_round.setGeometry(QtCore.QRect(270, 530, 131, 51))
+        self.btn_next_round.setGeometry(QtCore.QRect(260, 520, 151, 51))
         font = QtGui.QFont()
         font.setFamily("Source Code Pro")
         font.setPointSize(18)
@@ -108,7 +108,7 @@ class Ui_MainWindow(object):
         self.btn_next_round.setObjectName("btn_next_round")
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 672, 31))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 672, 36))
         self.menubar.setObjectName("menubar")
         self.menuMode = QtWidgets.QMenu(self.menubar)
         font = QtGui.QFont()
