@@ -2,7 +2,7 @@ import os
 
 
 stats_file = 'stats.db'
-vocabruary_file_path = 'data' + os.sep + 'vocabruary.txt'
+vocabulary_file_path = 'data' + os.sep + 'vocabulary.txt'
 
 stylesheets = {
     'default': 'font: 14pt "Open Sans";',

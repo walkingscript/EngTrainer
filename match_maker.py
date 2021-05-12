@@ -1,37 +1,37 @@
 import random
 from typing import NamedTuple
 
-from vocabruary import Vocabruary
-from settings import vocabruary_file_path
+from settings import vocabulary_file_path
+from vocabulary import Vocabulary
 
 
 class WordSet(NamedTuple):
-    question: str      # word that need to be translated
-    guesses: list[str] # list with answers
-    right_answer: int  # index of the right answer in guesses
+    question: str       # word that need to be translated
+    guesses: list[str]  # list with answers
+    right_answer: int   # index of the right answer in guesses
 
 
 class MatchMaker:
-    '''Choses the set of word from Vocabruary.
+    """Chooses the set of word from Vocabulary.
     The set consist of:
         question: 1 word, that needs to be translated
         guesses: list that consist from N variants of translation
-        right_answer: index of list element where the right answer.'''
+        right_answer: index of list element where the right answer."""
 
     def __init__(self, lang='en', guess_count=4):
-        '''Param lang accepts only ru or en and determines from which
-        language will be translating words. By default en.'''
+        """Param lang accepts only ru or en and determines from which
+        language will be translating words. By default en."""
         self.lang = lang
         self.guess_count = guess_count
-        self.vc = Vocabruary(filename=vocabruary_file_path)
+        self.vc = Vocabulary(filename=vocabulary_file_path)
 
     def is_english_verb(self, word: str):
-        '''Returns True if english word is a verb'''
+        """Returns True if english word is a verb"""
         if word.startswith('to '):
             return True
 
     def is_russian_verb(self, word: str):
-        '''Returns True if russian word is a verb'''
+        """Returns True if russian word is a verb"""
         word_ending = ('ть', 'ться')
         if word.endswith(word_ending):
             return True
@@ -43,9 +43,9 @@ class MatchMaker:
             return self.__make_set_from_ru_to_en()
 
     def __make_set_from_en_to_ru(self):
-        '''Creates the set of words for round.
+        """Creates the set of words for round.
         Set of the WordSet type.
-        The word translates from english to russian.'''
+        The word translates from english to russian."""
         question = self.vc.get_random_source_word()
         possible_answers = self.vc.get_translation(question)
         wrong_answers = list(filter(lambda x: x not in possible_answers, 
@@ -65,9 +65,9 @@ class MatchMaker:
                        right_answer=right_answer)
 
     def __make_set_from_ru_to_en(self):
-        '''Creates the set of words for round.
+        """Creates the set of words for round.
         Set of the WordSet type.
-        The word translates from russian to english.'''
+        The word translates from russian to english."""
         right_answer, question = self.vc.get_random_pair()
         wrong_answers = list(filter(lambda x: x != right_answer, 
                                     self.vc.get_all_source_words()))
@@ -82,4 +82,4 @@ class MatchMaker:
         right_answer = answers_for_set.index(right_answer)
         return WordSet(question=question,
                        guesses=answers_for_set,
-                       right_answer=right_answer)    
+                       right_answer=right_answer)

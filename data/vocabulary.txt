@@ -105,7 +105,7 @@ to guard - охранять
 worse - хуже
 to sort out - отсортировать, перебрать, пересмотреть
 a hoop - кольцо
-nasty - противный, гадкий, наприятный, мерзкий, отвратительный, злобный, опасный
+nasty - противный, гадкий, неприятный, мерзкий, отвратительный, злобный, опасный
 to worry - беспокоиться
 retire - выходить на пенсию
 an appeal - обращение
@@ -477,3 +477,62 @@ approximately - примерно
 beneath - под
 breaking apart - разваливается
 imploading - загрузка, погружение
+severity - строгость
+pseudonym - псевдоним
+liven - оживить
+an unseeing - невидящий
+a gunman - боевик
+repeatable - повторяемый
+to recreate - воссоздать
+obstruction - препятствие
+a prank - розыгрыш
+a matchbox - коробок спичек
+a backer - покровитель
+an attentive - внимательный
+to attend - присутствовать
+to pee - пописать
+a birdcage - клетка для птиц
+a questionnaire - опросник
+to overstep - переступать
+a possession - владение
+harmful - вредный
+a voter - избиратель
+fatty - жирный
+purchase - покупка
+an announcement - объявление
+fastening - крепление
+to fold - складывать
+to murmur - бормотать
+dually - вдвойне
+underbrush - подлесок
+a radiance - сияние
+inexpressible - невыразимый
+tightly - плотно
+earful - внимательный
+stamina - выносливость
+unchained - освобожденный
+exclaim - воскликнуть
+sophisticated - сложный
+toolkit - Инструментарий
+subsection - подраздел
+fragrance - аромат
+flap - хлопать
+solitude - одиночество
+hound - гончая
+seer - провидец
+univariate - одномерный
+bespeak - говорить
+traitor - предатель
+amateurish - любительский
+compelling - неотразимый
+outraged - возмущенный
+impairment - обесценение
+blustery - шумный
+deity - божество
+wort - сусло
+whopping - колоссальный
+pucker - морщить
+relegate - понижать
+perpetuate - увековечивать
+novitiate - послушник
+crescent - полумесяц

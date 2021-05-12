@@ -1,5 +1,5 @@
-import sqlite3
 import getpass
+import sqlite3
 
 from settings import stats_file
 
